@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Masters: Fun with Numbers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bungee&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #1a0f2a;
+            color: #ffffff;
+            /* 80s synthwave gradient background */
+            background-image: linear-gradient(to bottom, #1d1033, #3c1e5a, #6d2d4a);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Starry sky effect */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(white 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.2;
+            z-index: -2;
+        }
+
+        /* Perspective grid lines */
+        body::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%) perspective(200px) rotateX(45deg);
+            width: 150vw;
+            height: 50vh;
+            background: linear-gradient(90deg, 
+                rgba(255, 0, 255, 0.4) 1px, transparent 1px), 
+                linear-gradient(0deg, rgba(255, 0, 255, 0.4) 1px, transparent 1px);
+            background-size: 50px 25px;
+            z-index: -1;
+            border-top: 2px solid rgba(255, 0, 255, 0.6);
+        }
+
+        .title-main {
+            font-family: 'Bungee', cursive;
+            background: linear-gradient(to bottom, #ffd700, #ffa500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(4px 4px 0 #000);
+        }
+
+        .title-sub {
+            font-family: 'Press Start 2P', cursive;
+            color: #fff;
+            text-shadow: 2px 2px 0 #000;
+        }
+
+        .synthwave-button {
+            font-family: 'Bungee', cursive;
+            background-color: #ff3c3c;
+            color: #fff;
+            border-radius: 50px;
+            border: 4px solid #ffd700;
+            box-shadow: 0 0 10px #ffd700, 0 5px 0 #c42a2a;
+            transition: all 0.1s ease-in-out;
+            text-shadow: 2px 2px 0px #c42a2a;
+        }
+
+        .synthwave-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px #ffd700, 0 7px 0 #c42a2a;
+        }
+
+        .synthwave-button:active {
+            transform: translateY(2px);
+            box-shadow: 0 0 5px #ffd700, 0 2px 0 #c42a2a;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-between min-h-screen p-4 sm:p-6 md:p-8">
+
+    <!-- Main Content Wrapper -->
+    <main class="w-full max-w-2xl text-center">
+        <!-- Game Title -->
+        <h1 class="text-6xl sm:text-7xl md:text-8xl mb-2 title-main">
+            MATH MASTERS
+        </h1>
+        <h2 class="text-lg sm:text-xl md:text-2xl title-sub mb-8 sm:mb-12">
+            FUN WITH NUMBERS
+        </h2>
+
+        <!-- Main Game Image -->
+        <div class="mb-10 sm:mb-12">
+            <img 
+                src="./assets/mainsplash.png" 
+                alt="Math Masters Gameplay Screenshot" 
+                class="w-full max-w-sm mx-auto h-auto object-cover rounded-2xl"
+                onerror="this.onerror=null;this.src='https://placehold.co/400x600/1a1a1a/ff00ff?text=Image+Load+Error';"
+            >
+        </div>
+        
+        <!-- App Store Download Button -->
+        <a href="#" class="inline-block p-3 synthwave-button" aria-label="Download on the App Store">
+            <img src="./assets/apple.svg" alt="Download on the App Store" class="h-12 w-auto">
+        </a>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full text-center mt-12 z-10">
+        <a href="./privacy-policy.html" class="text-sm text-gray-300 hover:text-yellow-300 transition-colors duration-200">
+            Privacy Policy
+        </a>
+        <p class="text-xs text-gray-500 mt-2">© 2025 All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
+

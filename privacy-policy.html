@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Math Masters</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn-tailwindcss.vercel.app/"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bungee&display=swap" rel="stylesheet">
@@ -14,80 +14,92 @@
             background-color: #1a0f2a;
             color: #ffffff;
             background-image: linear-gradient(to bottom, #1d1033, #3c1e5a, #6d2d4a);
+            background-attachment: fixed;
         }
-        h1, h2 {
+        h1 {
             font-family: 'Bungee', cursive;
+            /* Added gradient and shadow to match the main page title */
+            background: linear-gradient(to bottom, #ffd700, #ffa500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(3px 3px 0 #000);
         }
-        .policy-container a {
+        /* Styles for links within the policy text */
+        .policy-content a {
             color: #ffd700;
             text-decoration: underline;
         }
-        .policy-container a:hover {
-            color: #ff3c3c;
+        .policy-content a:hover {
+            color: #fff;
+        }
+        /* New class for the back button */
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-family: 'Bungee', cursive;
+            background-color: #ff3c3c;
+            color: #fff;
+            border-radius: 50px;
+            border: 3px solid #ffd700;
+            box-shadow: 0 0 8px #ffd700, 0 4px 0 #c42a2a;
+            transition: all 0.1s ease-in-out;
+            text-shadow: 1px 1px 0px #c42a2a;
+            text-decoration: none;
+        }
+        .back-button:hover {
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 0 12px #ffd700, 0 6px 0 #c42a2a;
         }
     </style>
 </head>
-<body class="p-6 sm:p-8 md:p-12">
-    <div class="container mx-auto max-w-3xl bg-black bg-opacity-20 p-8 rounded-lg border-2 border-pink-500 shadow-lg policy-container">
-        <h1 class="text-3xl sm:text-4xl text-yellow-400 mb-6 text-center">Privacy Policy for Math Masters</h1>
+<body class="p-4 sm:p-8 md:p-12">
+    <div class="max-w-4xl mx-auto bg-black bg-opacity-20 p-6 sm:p-10 rounded-lg shadow-lg">
+        <h1 class="text-3xl sm:text-4xl text-center mb-8">Privacy Policy for Math Masters</h1>
 
-        <p class="mb-4"><strong>Effective Date:</strong> August 29, 2025</p>
+        <div class="space-y-6 text-sm sm:text-base text-gray-300 policy-content">
+            <p><strong>Last Updated:</strong> August 29, 2025</p>
 
-        <p class="mb-4">
-            This Privacy Policy describes how Math Masters ("we," "us," or "our") handles information in our application Math Masters: Fun with Numbers (the "App"). Your privacy is important to us, and we are committed to being transparent about the data we collect.
-        </p>
+            <p>Welcome to Math Masters ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we handle information in our application.</p>
 
-        <h2 class="text-2xl text-yellow-400 mt-6 mb-4">1. Data We Collect</h2>
-        <p class="mb-4">
-            To help us improve the Math Masters app and provide a better experience, we collect anonymous analytics data. We do not collect any Personally Identifiable Information (PII) such as your name, email address, location, or other sensitive personal data.
-        </p>
-        <p class="mb-4">
-            The anonymous data we collect includes:
-        </p>
-        <ul class="list-disc list-inside mb-4 ml-4 space-y-2">
-            <li><strong>Usage Data:</strong> Information about how you interact with the App, such as features used, screens viewed, session duration, and actions taken within the game.</li>
-            <li><strong>Device Information:</strong> General information about your device, including the device model, operating system version, and screen resolution.</li>
-            <li><strong>Performance Data:</strong> Crash reports and other performance data to help us identify and fix bugs.</li>
-        </ul>
-        <p class="mb-4">
-            All game progress and scores are still stored locally on your device only and are not transmitted to us.
-        </p>
+            <h2 class="text-2xl font-bold pt-4 pb-2 text-white">1. Data We Collect</h2>
+            <p>Our goal is to provide a fun and educational experience while respecting your privacy. We collect a limited amount of non-personal, anonymous data to improve our app's performance and stability.</p>
+            
+            <h3 class="text-xl font-bold pt-2 pb-1 text-white">a. Analytics Data (via Vexo)</h3>
+            <p>We use Vexo Analytics to understand how our app is used. This service helps us see which features are popular, how much time users spend in the app, and general usage patterns. All data collected by Vexo is anonymous and aggregated, meaning it cannot be used to identify you personally.</p>
 
-        <h2 class="text-2xl text-yellow-400 mt-6 mb-4">2. How We Use Your Data</h2>
-        <p class="mb-4">
-            The anonymous data we collect is used solely for internal purposes to:
-        </p>
-        <ul class="list-disc list-inside mb-4 ml-4 space-y-2">
-            <li>Understand how our users engage with the App.</li>
-            <li>Improve the App's features, design, and overall user experience.</li>
-            <li>Diagnose and resolve technical issues and crashes.</li>
-        </ul>
-        
-        <h2 class="text-2xl text-yellow-400 mt-6 mb-4">3. Third-Party Services (Analytics)</h2>
-        <p class="mb-4">
-            We use Vexo as our third-party analytics provider to collect and process this anonymous data. Vexo has its own privacy policy that governs its use of data.
-        </p>
-        <p class="mb-4">
-            You can review Vexo's privacy policy here: <a href="https://vexo.co/privacy" target="_blank" rel="noopener noreferrer">https://vexo.co/privacy</a>
-        </p>
+            <h3 class="text-xl font-bold pt-2 pb-1 text-white">b. Diagnostics Data (via Sentry.io)</h3>
+            <p>We use Sentry.io to monitor the app for crashes and errors. If the app crashes, Sentry collects anonymous diagnostic information, such as device type, operating system version, and technical error logs. This data is essential for helping us find and fix bugs to improve the app's stability. It does not contain any personal identifiers.</p>
 
-        <h2 class="text-2xl text-yellow-400 mt-6 mb-4">4. Children's Privacy</h2>
-        <p class="mb-4">
-            We are committed to protecting the privacy of children. The anonymous analytics data we collect is not used to identify or track individual children. The app is designed to be safe for users of all ages and is in compliance with the Children's Online Privacy Protection Act (COPPA).
-        </p>
 
-        <h2 class="text-2xl text-yellow-400 mt-6 mb-4">5. Changes to This Privacy Policy</h2>
-        <p class="mb-4">
-            We may update our Privacy Policy from time to time. Any changes will be reflected in an updated version of the app on the App Store. We encourage you to review this Privacy Policy periodically for any changes.
-        </p>
+            <h2 class="text-2xl font-bold pt-4 pb-2 text-white">2. How We Use Your Data</h2>
+            <p>The anonymous data we collect is used exclusively for the following purposes:</p>
+            <ul class="list-disc list-inside ml-4 space-y-2">
+                <li>To improve app features, performance, and user experience.</li>
+                <li>To identify and resolve technical issues, bugs, and crashes.</li>
+                <li>To make informed decisions about future updates and developments.</li>
+            </ul>
 
-        <h2 class="text-2xl text-yellow-400 mt-6 mb-4">6. Contact Us</h2>
-        <p class="mb-4">
-            If you have any questions about this Privacy Policy, you can contact us at: <a href="mailto:support@mathmasters.app">support@mathmasters.app</a>
-        </p>
-        
-        <div class="text-center mt-8">
-             <a href="./index.html" class="inline-block py-3 px-6 text-lg uppercase tracking-wider bg-yellow-500 text-black rounded-full border-2 border-white hover:bg-yellow-400 transition-colors">Back to Home</a>
+            <h2 class="text-2xl font-bold pt-4 pb-2 text-white">3. Third-Party Services</h2>
+            <p>We rely on the following third-party services, which have their own privacy policies:</p>
+            <ul class="list-disc list-inside ml-4 space-y-2">
+                <li><strong>Vexo Analytics:</strong> For anonymous usage statistics. You can view their policy at <a href="https://vexo.co/privacy" target="_blank" rel="noopener noreferrer">vexo.co/privacy</a>.</li>
+                <li><strong>Sentry.io:</strong> For anonymous crash reporting and diagnostics. You can view their policy at <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">sentry.io/privacy/</a>.</li>
+            </ul>
+
+            <h2 class="text-2xl font-bold pt-4 pb-2 text-white">4. Children's Privacy</h2>
+            <p>Our app is designed for all ages. We do not knowingly collect any personally identifiable information from anyone, including children under the age of 13. All data collected is anonymous and used solely for improving the app.</p>
+
+            <h2 class="text-2xl font-bold pt-4 pb-2 text-white">5. Changes to This Privacy Policy</h2>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.</p>
+
+            <h2 class="text-2xl font-bold pt-4 pb-2 text-white">6. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please feel free to contact us.</p>
+            
+            <div class="text-center mt-8">
+                <a href="./index.html" class="back-button">&larr; Back to Main Page</a>
+            </div>
         </div>
     </div>
 </body>

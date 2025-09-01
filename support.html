@@ -18,82 +18,94 @@
             position: relative;
             background-attachment: fixed;
         }
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        body::before { /* Starry sky */
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             background-image: radial-gradient(white 1px, transparent 1px);
-            background-size: 20px 20px;
-            opacity: 0.2;
-            z-index: -2;
+            background-size: 20px 20px; opacity: 0.2; z-index: -2;
         }
-        body::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
+        body::after { /* Perspective grid */
+            content: ''; position: absolute; bottom: 0; left: 50%;
             transform: translateX(-50%) perspective(200px) rotateX(45deg);
-            width: 150vw;
-            height: 50vh;
+            width: 150vw; height: 50vh;
             background: linear-gradient(90deg, 
                 rgba(255, 0, 255, 0.4) 1px, transparent 1px), 
                 linear-gradient(0deg, rgba(255, 0, 255, 0.4) 1px, transparent 1px);
-            background-size: 50px 25px;
-            z-index: -1;
+            background-size: 50px 25px; z-index: -1;
             border-top: 2px solid rgba(255, 0, 255, 0.6);
         }
         .title-main {
             font-family: 'Bungee', cursive;
             background: linear-gradient(to bottom, #ffd700, #ffa500);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            -webkit-background-clip: text; background-clip: text; color: transparent;
             filter: drop-shadow(4px 4px 0 #000);
         }
         .title-sub {
             font-family: 'Press Start 2P', cursive;
-            color: #fff;
-            text-shadow: 2px 2px 0 #000;
+            color: #fff; text-shadow: 2px 2px 0 #000;
+        }
+        /* NEW: Style for the glowing icon border */
+        .image-border {
+            border: 4px solid #00ffff;
+            box-shadow: 0 0 15px #00ffff;
+        }
+        /* NEW: Neon button style for the email link */
+        .neon-button {
+            display: inline-block;
+            background-color: rgba(0, 255, 255, 0.1);
+            border: 2px solid #00ffff;
+            color: #ffffff;
+            text-shadow: 0 0 5px #00ffff, 0 0 10px #000;
+            box-shadow: 0 0 8px #00ffff, inset 0 0 8px #00ffff;
+            transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .neon-button:hover {
+            background-color: rgba(0, 255, 255, 0.25);
+            color: #00ffff;
+            box-shadow: 0 0 15px #00ffff, inset 0 0 15px #00ffff;
         }
     </style>
 </head>
 <body class="flex flex-col items-center min-h-screen p-4 sm:p-6 md:p-8">
 
-    <main class="w-full max-w-2xl text-center flex-grow flex flex-col justify-center">
-        <h1 class="text-6xl sm:text-7xl md:text-8xl mb-2 title-main">
+    <main class="w-full max-w-2xl text-center flex-grow flex flex-col justify-center items-center">
+        <h1 class="text-5xl sm:text-6xl md:text-7xl mb-4 title-main">
             SUPPORT
         </h1>
-        <h2 class="text-lg sm:text-xl md:text-2xl title-sub mb-8 sm:mb-12">
-            WE'RE HERE TO HELP!
+        <h2 class="text-md sm:text-lg md:text-xl title-sub mb-8">
+            PLAYER ASSISTANCE
         </h2>
+        
+        <div class="mb-8">
+            <img 
+                src="https://placehold.co/128x128/1a0f2a/00ffff/png?text=%3F&font=press-start-2p" 
+                alt="Support Icon"
+                class="rounded-full image-border"
+            >
+        </div>
 
-        <div class="mb-10 sm:mb-12 text-base sm:text-lg leading-relaxed">
-            <p class="mb-6">
-                For questions, feedback, or technical issues, please email our team.
+        <div class="w-full max-w-lg bg-black/20 border-2 border-fuchsia-500/50 rounded-xl p-6 sm:p-8 shadow-lg">
+             <p class="text-base leading-relaxed mb-6">
+                Stuck on a level? Found a bug? Send a transmission to our support crew!
             </p>
             <a 
                 href="mailto:support@mathmasters.app" 
-                class="text-xl sm:text-2xl text-yellow-300 hover:text-cyan-300 transition-colors duration-200"
-                style="text-shadow: 2px 2px 0 #ff00ff;"
+                class="neon-button text-lg sm:text-xl px-6 py-4 rounded-lg"
             >
                 support@mathmasters.app
             </a>
         </div>
         
-        <a href="./" class="text-sm text-gray-300 hover:text-yellow-300 transition-colors duration-200 mt-8">
+        <a href="./" class="text-sm text-gray-300 hover:text-yellow-300 transition-colors duration-200 mt-12">
             &lt; Back to Home
         </a>
-
     </main>
 
     <footer class="w-full text-center py-4 z-10">
-        <div class="space-x-4">
+        <div>
             <a href="./privacy-policy.html" class="text-sm text-gray-300 hover:text-yellow-300 transition-colors duration-200">
                 Privacy Policy
             </a>
+            <span class="mx-2 text-gray-500">|</span>
             <a href="./support.html" class="text-sm text-gray-300 hover:text-yellow-300 transition-colors duration-200">
                 Support
             </a>
